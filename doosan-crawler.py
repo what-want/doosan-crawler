@@ -21,7 +21,7 @@ DoosanURL = "http://sports.news.naver.com/kbo/news/index.nhn?date=%(target_date)
 #URL = "http://sports.news.naver.com/kbo/news/index.nhn?date=20170409&type=team&team=OB&page=1"
  
 
-# 크롤링 함수
+# crawling function
 def getDoosan( url, target_date ):
 
     TARGET = {
@@ -98,7 +98,7 @@ if __name__ == '__main__':
     #    print ""
     #exit()
 
-    NEWSFILENAME = str(target_date) + ".json"
+    NEWSFILENAME = str(target_date) + ".dat"
 
     with open(NEWSFILENAME, "w") as f:
         f.write( json.dumps(articles) )
